@@ -76,8 +76,16 @@ a:hover {
 }
 
 .navbar-brand img {
-  max-height: 5rem;
-  width: auto;
+    max-height: 5rem;
+    width: auto;
+    display: block; /* Evita espacios innecesarios debajo de la imagen */
+    margin: auto; /* Centra la imagen horizontalmente dentro del contenedor */
+}
+
+/* Opcional: Añade transiciones suaves para cambios de tamaño */
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Ajusta la escala al pasar el mouse si lo deseas */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
 }
 
 .navbar-dark .navbar-toggler {
