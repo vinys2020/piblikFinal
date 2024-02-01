@@ -72,7 +72,7 @@ a:hover {
 }
 
 .dropdown-item:hover {
-  background-color: rgba(0, 0, 0, 0.856); /* Cambia el fondo a negro */
+  background-color: rgba(154, 26, 158, 0.856); /* Cambia el fondo a negro */
   color: white; /* Cambia el color del texto a blanco */
 }
 
