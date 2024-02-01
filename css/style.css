@@ -72,7 +72,8 @@ a:hover {
 }
 
 .dropdown-item:hover {
-  color: var(--third-alpha-color);
+  background-color: rgba(0, 0, 0, 0.856); /* Cambia el fondo a negro */
+  color: white; /* Cambia el color del texto a blanco */
 }
 
 .navbar-brand img {
