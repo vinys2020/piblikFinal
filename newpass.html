@@ -39,7 +39,10 @@
             if (
               isMobileDevice() &&
               (document.activeElement === usernameInput ||
-                document.activeElement === emailInput)
+                document.activeElement === emailInput ||
+                document.activeElement === oldPasswordInput || // Nuevo campo
+                document.activeElement === newPasswordInput ||
+                document.activeElement === confirmPasswordInput) // Nuevo campo
             ) {
               footer.classList.add("hide-footer");
             }
