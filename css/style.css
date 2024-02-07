@@ -76,6 +76,10 @@ a:hover {
   color: white; /* Cambia el color del texto a blanco */
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .navbar-brand img {
     max-height: 5rem;
     width: auto;
