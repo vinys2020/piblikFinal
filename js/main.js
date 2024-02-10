@@ -35,9 +35,6 @@ window.addEventListener('scroll', function () {
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 3,
   spaceBetween: 10,
-  autoplay: {
-    delay: 4500, // swiper de ultimos proyectos  
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -46,8 +43,8 @@ var swiper = new Swiper('.mySwiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  MouseEvent: true,
   effect: 'slide',
-  speed: 800,
   breakpoints: {
     300: {
       slidesPerView: 1,
