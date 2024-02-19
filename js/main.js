@@ -2,14 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Añadir la clase "slide-up" para la animación hacia arriba
         entry.target.classList.add("loaded", "slide-up");
         observer.unobserve(entry.target);
       }
     });
   });
 
-  // Observar todos los elementos con la clase "slide-up"
   const slideUpElements = document.querySelectorAll(".slide-up");
   slideUpElements.forEach(element => {
     observer.observe(element);
@@ -34,7 +32,7 @@ window.addEventListener('scroll', function () {
 
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 3,
-  spaceBetween: 10,
+  spaceBetween: 10, // swipers de proyectos 
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -65,10 +63,10 @@ var swiper = new Swiper('.mySwiper', {
 
 var swiper1 = new Swiper('.mySwiper2', {
   slidesPerView: 3,
-  spaceBetween: 10,
+  spaceBetween: 5,
   loop: true, 
   autoplay: {
-    delay: 500, // swipers de colaboraciones 
+    delay: 1000, // swipers de colaboraciones 
     disableOnInteraction: false, 
   },
   pagination: {
@@ -80,7 +78,7 @@ var swiper1 = new Swiper('.mySwiper2', {
     prevEl: '.swiper-button-prev',
   },
   effect: 'slide',
-  speed: 1200,
+  speed: 2000,
   breakpoints: {
     300: {
       slidesPerView: 1,

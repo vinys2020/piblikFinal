@@ -2,9 +2,7 @@
 :root {
   --first-color: rgb(253, 2, 173);
   --first-alpha-color: rgba(217, 0, 98, 0.75);
-  --second-color: rgba(0, 0, 0, 0.915);
   --second-alpha-color: rgba(49, 55, 109, 0.562);
-  --seconddddddddd-alpha-color: rgba(197, 43, 43, 0.869);
   --third-color: rgb(0, 0, 0);
   --third-alpha-color: rgba(80, 20, 100, 0.75);
   --four-color: rgb(185, 19, 240);
@@ -47,12 +45,6 @@ a:hover {
   color: var(--first-color);
 }
 
-
-.bg-dark {
-  background-color: var(--second-color) !important;
-}
-
-
 .carousel-caption {
   z-index: 1;
 }
@@ -72,8 +64,8 @@ a:hover {
 }
 
 .dropdown-item:hover {
-  background-color: rgba(154, 26, 158, 0.856); /* Cambia el fondo a negro */
-  color: white; /* Cambia el color del texto a blanco */
+  background-color: rgba(154, 26, 158, 0.856);
+  color: white;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -83,14 +75,13 @@ a:hover {
 .navbar-brand img {
     max-height: 5rem;
     width: auto;
-    display: block; /* Evita espacios innecesarios debajo de la imagen */
-    margin: auto; /* Centra la imagen horizontalmente dentro del contenedor */
+    display: block;
+    margin: auto;
 }
 
-/* Opcional: Añade transiciones suaves para cambios de tamaño */
 .navbar-brand img:hover {
-    transform: scale(1.1); /* Ajusta la escala al pasar el mouse si lo deseas */
-    transition: transform 0.3s ease; /* Agrega una transición suave */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .navbar-dark .navbar-toggler {
@@ -203,8 +194,6 @@ a:hover {
 }
 
 
-
-
 .scroll-top {
   display: none;
   position: fixed;
@@ -226,21 +215,14 @@ a:hover {
   box-shadow: none;
 }
 
-
-
-
-
 .scroll-top:focus {
   outline: none;
 }
 
-
 .scroll-top:hover {
   transform: scale(1.1);
-  border: 1px solid white; /* Añade el borde blanco al hacer hover */
+  border: 1px solid white;
 }
-
-
 
 
 .card-header{
@@ -277,11 +259,12 @@ a:hover {
 }
 
 
-
 .card-text::-webkit-scrollbar-thumb {
   background-color: #999; 
   border-radius: 3px;
 }
+
+
 @media (max-width: 767px) {
   .card-text {
     overflow-y: hidden; /* Oculta el desplazamiento vertical en dispositivos móviles */
@@ -466,8 +449,6 @@ a:hover {
 
 
 
-
-
 @media (max-width: 767px) {
   .navbar-toggler {
     order: -1; /* Cambia el orden para que aparezca antes en dispositivos móviles */
@@ -487,29 +468,10 @@ a:hover {
 }
 
 
-
-
-
-@media (min-width: 576px) {
-}
-
-
-@media (min-width: 768px) {
-}
-
-
 @media (min-width: 992px) {
   .nav-item:hover {
     background-color: transparent;
   }
-}
-
-
-@media (min-width: 1200px) {
-}
-
-
-@media (min-width: 1400px) {
 }
 
 @media (max-width: 767px) {
