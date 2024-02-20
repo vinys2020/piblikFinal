@@ -223,7 +223,7 @@
          <div class="d-flex justify-content-center">
   
           <article class="col-11 col-md-11 col-lg-11" style="margin-bottom: 60px;">
-            <video src="img/mas tiempo libre (2).mp4" class="object-fit-contain" autoplay muted loop style="width: 100%; height: 100%; object-fit: cover; border-radius: 45px;" preload="metadata"></video>
+            <video src="img/mas tiempo libre (2).mp4" class="object-fit-contain" autoplay muted loop style="width: 100%; height: 100%; object-fit: cover; border-radius: 45px;" preload="auto"></video>
           </article>
           
         </div>
@@ -287,6 +287,55 @@
             />
 
           </article>
+          
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const wordContainer = document.getElementById('wordContainer');
+                const words = ['Diseño Gráfico', 'Producción Audiovisual', 'Fotografía Profesional', 'Marketing Digital', 'Gestión de Marcas', 'Desarrollo Web', 'Aplicaciones Moviles', 'Desarrollo de Softwar'];
+      
+                function animateWords() {
+                    let index = 0;
+      
+                    function updateWord() {
+                        const currentWord = words[index];
+                        let charIndex = 0;
+      
+                        function typeEffect() {
+                            wordContainer.textContent = currentWord.slice(0, charIndex);
+                            charIndex++;
+      
+                            if (charIndex <= currentWord.length) {
+                                setTimeout(typeEffect, 50); // Ajusta la velocidad de escritura
+                            } else {
+                                setTimeout(() => {
+                                    eraseEffect();
+                                }, 1500); // Tiempo antes de comenzar a borrar
+                            }
+                        }
+      
+                        function eraseEffect() {
+                            wordContainer.textContent = currentWord.slice(0, charIndex);
+                            charIndex--;
+      
+                            if (charIndex >= 0) {
+                                setTimeout(eraseEffect, 50); // Ajusta la velocidad de borrado
+                            } else {
+                                index = (index + 1) % words.length;
+                                setTimeout(() => {
+                                    updateWord();
+                                }, 500); // Tiempo antes de comenzar a escribir la siguiente palabra
+                            }
+                        }
+      
+                        typeEffect();
+                    }
+      
+                    updateWord();
+                }
+      
+                animateWords();
+            });   
+          </script>
 
         </section>
 
@@ -503,54 +552,6 @@
 
           </article>
 
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const wordContainer = document.getElementById('wordContainer');
-                const words = ['Diseño Gráfico', 'Producción Audiovisual', 'Fotografía Profesional', 'Marketing Digital', 'Gestión de Marcas', 'Desarrollo Web', 'Aplicaciones Moviles', 'Desarrollo de Softwar'];
-      
-                function animateWords() {
-                    let index = 0;
-      
-                    function updateWord() {
-                        const currentWord = words[index];
-                        let charIndex = 0;
-      
-                        function typeEffect() {
-                            wordContainer.textContent = currentWord.slice(0, charIndex);
-                            charIndex++;
-      
-                            if (charIndex <= currentWord.length) {
-                                setTimeout(typeEffect, 50); // Ajusta la velocidad de escritura
-                            } else {
-                                setTimeout(() => {
-                                    eraseEffect();
-                                }, 1500); // Tiempo antes de comenzar a borrar
-                            }
-                        }
-      
-                        function eraseEffect() {
-                            wordContainer.textContent = currentWord.slice(0, charIndex);
-                            charIndex--;
-      
-                            if (charIndex >= 0) {
-                                setTimeout(eraseEffect, 50); // Ajusta la velocidad de borrado
-                            } else {
-                                index = (index + 1) % words.length;
-                                setTimeout(() => {
-                                    updateWord();
-                                }, 500); // Tiempo antes de comenzar a escribir la siguiente palabra
-                            }
-                        }
-      
-                        typeEffect();
-                    }
-      
-                    updateWord();
-                }
-      
-                animateWords();
-            });   
-          </script>
 
           <section class="row text-white align-items-lg-center mb-5">
             <article class="col-12 col-lg-6 slide-up" style="margin-top: 65px;">

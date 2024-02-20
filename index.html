@@ -31,11 +31,8 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Verificar si ya hay una sesión activa (por ejemplo, si el usuario ya ha iniciado sesión)
-        // Si es así, redirigir directamente a la página de inicio
-        // Puedes personalizar esto según tus necesidades
 
-        // Supongamos que tienes una función isAuthenticated que verifica la autenticación
+
         if (isAuthenticated()) {
           window.location.href = "index.html";
         }
@@ -47,11 +44,9 @@
           loginForm.addEventListener("submit", function (event) {
             event.preventDefault(); // Evitar la recarga de la página por defecto del formulario
 
-            // Obtener los valores del formulario
             const username = document.getElementById("username").value; // Reemplaza 'username' con el ID real de tu campo de nombre de usuario
             const password = document.getElementById("password").value; // Reemplaza 'password' con el ID real de tu campo de contraseña
 
-            // Realizar la lógica de autenticación aquí (puedes usar AJAX, fetch, etc.)
             // Supongamos que tienes una función authenticate que verifica la autenticación
             if (authenticate(username, password)) {
               // Autenticación exitosa, redirigir al usuario a la página de inicio
@@ -64,19 +59,17 @@
         }
       });
 
-      // Función de ejemplo para verificar la autenticación (reemplázala con tu lógica real)
+      // Función para verificar la autenticación
       function isAuthenticated() {
-        // Aquí deberías verificar si el usuario ya ha iniciado sesión
         // Devuelve true si está autenticado, de lo contrario, devuelve false
-        return false; // Cambia esto según tu lógica real
+        return false; 
       }
 
-      // Función de ejemplo para autenticar (reemplázala con tu lógica real)
       function authenticate(username, password) {
-        // Aquí deberías realizar la autenticación utilizando los valores del nombre de usuario y la contraseña
-        // Devuelve true si la autenticación es exitosa, de lo contrario, devuelve false
-        return username === "usuario" && password === "contrasena"; // Cambia esto según tu lógica real
+
+        return username === "usuario" && password === "contrasena"; 
       }
+
     </script>
 
 <script>

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     } else {
 
-      alert("Nombre de usuario o contraseña incorrectos");
+      alert("Usuario o contraseña incorrectos. Por favor, verifica e inténtalo nuevamente.");
 
     }
   });
@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-    const isUserRegistered = checkUserRegistration(existingUsers, newUsername);
+    const isUserRegistered = checkUserRegistration(existingUsers, newUsername, email);
 
     if (isUserRegistered) {
 
-      alert("El nombre de usuario ya está registrado. Por favor, elige otro.");
+      alert("El nombre de usuario o email ya está registrado. Por favor, elige otro.");
 
     } else {
 
@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //verificar si el usuario ya está registrado
-  function checkUserRegistration(users, username) {
-    return users.some(user => user.username === username);
+  function checkUserRegistration(users, username, email) {
+    return users.some(user => user.username === username || user.email === email);
   }
   
 });

@@ -265,11 +265,7 @@ a:hover {
 }
 
 
-@media (max-width: 767px) {
-  .card-text {
-    overflow-y: hidden; /* Oculta el desplazamiento vertical en dispositivos móviles */
-  }
-}
+
 
 .card-text p {
   max-width: 100%; 
@@ -359,11 +355,7 @@ a:hover {
   border-radius: 3px;
 }
 
-@media (max-width: 767px) {
-  .info::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento en dispositivos móviles */
-  }
-}
+
 
 
 .row {
@@ -427,6 +419,11 @@ a:hover {
   color: orange;
 }
 
+@media (max-width: 767px) {
+  .info::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en dispositivos móviles */
+  }
+}
 
 /* Ajustes de tipografía en dispositivos móviles */
 @media (max-width: 767px) {
@@ -447,26 +444,29 @@ a:hover {
   }
 }
 
-
-
 @media (max-width: 767px) {
   .navbar-toggler {
     order: -1; /* Cambia el orden para que aparezca antes en dispositivos móviles */
-    margin-right: 15px; /* Ajusta el margen derecho según sea necesario */
+    margin-right: 15px; 
   }
 
   .navbar-brand {
     order: 0; /* Cambia el orden para que aparezca después en dispositivos móviles */
   }
 }
-/* Ajustes para dispositivos móviles */
+
 @media (max-width: 767px) {
-  .navbar-brand img {
-    max-width: 150px; /* Ajusta el tamaño máximo del logo según tus necesidades */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
+  .card-text {
+    overflow-y: hidden;
   }
 }
 
+@media (max-width: 767px) {
+  .navbar-brand img {
+    max-width: 150px;
+    height: auto; 
+  }
+}
 
 @media (min-width: 992px) {
   .nav-item:hover {
@@ -485,6 +485,6 @@ a:hover {
 
 @media (max-width: 768px) {
   #wordContainer {
-      font-size: 25px; /* Tamaño de la fuente para dispositivos móviles */
+      font-size: 25px; 
   }
 }

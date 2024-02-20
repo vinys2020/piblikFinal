@@ -381,7 +381,6 @@
           registerForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
-            // Obtiene los valores del formulario
             const fullName = document.getElementById("fullName").value;
             const email = document.getElementById("email").value;
             const username = document.getElementById("username").value;
@@ -389,7 +388,6 @@
             const confirmPassword =
               document.getElementById("confirmPassword").value;
 
-            // Verifica si las contraseñas coinciden
             if (password !== confirmPassword) {
               alert(
                 "Las contraseñas no coinciden. Por favor, inténtalo de nuevo."
@@ -397,23 +395,20 @@
               return;
             }
 
-            // Obtiene los usuarios existentes o inicializa un array vacío
             const existingUsers =
               JSON.parse(localStorage.getItem("users")) || [];
 
-            // Verifica si el usuario ya está registrado
             const isUserRegistered = existingUsers.some(
-              (user) => user.username === username
+              (user) => user.username === username || user.email === email
             );
 
             if (isUserRegistered) {
               alert(
-                "El nombre de usuario ya está registrado. Por favor, elige otro."
+                "El nombre de usuario o email ya está registrado. Por favor, elige otro."
               );
               return;
             }
 
-            // Almacena los datos en el localStorage
             const newUser = {
               fullName: fullName,
               email: email,
@@ -421,16 +416,12 @@
               password: password,
             };
 
-            // Agrega el nuevo usuario al array
             existingUsers.push(newUser);
 
-            // Guarda el array actualizado en el localStorage
             localStorage.setItem("users", JSON.stringify(existingUsers));
 
-            // Muestra un mensaje de éxito
             alert("Registro exitoso. Ahora puedes iniciar sesión.");
 
-            // Opcional: Redirige al usuario a la página de inicio de sesión
             window.location.href = "index.html";
           });
         });
@@ -438,7 +429,6 @@
     </main>
 
     <footer class="bg-black p-3">
-
       <div class="container text-center">
         <nav class="d-flex justify-content-evenly">
           <a href="https://facebook.com" target="_blank" aria-label="Facebook">
@@ -453,17 +443,25 @@
           <a href="https://youtube.com" target="_blank" aria-label="YouTube">
             <i class="bi bi-youtube fs-3"></i>
           </a>
-          <a href="https://www.instagram.com/publik.tuc/" target="_blank" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/publik.tuc/"
+            target="_blank"
+            aria-label="Instagram"
+          >
             <i class="bi bi-instagram fs-3"></i>
           </a>
           <a href="https://m.me/user" target="_blank" aria-label="Messenger">
             <i class="bi bi-messenger fs-3"></i>
           </a>
-          <a href="https://api.whatsapp.com/send?phone=5493814685931" target="_blank" aria-label="WhatsApp">
+          <a
+            href="https://api.whatsapp.com/send?phone=5493814685931"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
             <i class="bi bi-whatsapp fs-3"></i>
           </a>
         </nav>
-        
+
         <div class="row">
           <div
             class="col-12 col-md-12 col-lg-12 d-flex justify-content-center mt-3"
@@ -481,8 +479,6 @@
           </div>
         </div>
       </div>
-
     </footer>
-
   </body>
 </html>

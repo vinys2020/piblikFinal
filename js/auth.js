@@ -16,24 +16,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-  
-  loginForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-    const userFound = storedUsers.find(user => user.username === username && user.password === password);
-
-    if (userFound) {
-
-      window.location.href = "pagina.html";
-      return;
-      
-    } else {
-      alert("Nombre de usuario o contraseña incorrectos");
-    }
-  });
 });
