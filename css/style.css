@@ -425,7 +425,6 @@ a:hover {
   }
 }
 
-/* Ajustes de tipografía en dispositivos móviles */
 @media (max-width: 767px) {
   body {
     font-size: 14px; 
@@ -443,6 +442,8 @@ a:hover {
     font-size: 14px; 
   }
 }
+
+
 
 @media (max-width: 767px) {
   .navbar-toggler {
