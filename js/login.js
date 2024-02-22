@@ -74,5 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkUserRegistration(users, username, email) {
     return users.some(user => user.username === username || user.email === email);
   }
+
+  
   
 });

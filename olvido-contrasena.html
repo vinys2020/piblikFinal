@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1, maximum-scale=10"
     />
+
     <title>Recuperar Contraseña - Publik</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -26,50 +27,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/zyro-image__4_-removebg-preview.png" />
 
-    <meta name="description" content="Bienvenido a Publik, tu plataforma para potenciar tu presencia en línea. Regístrate ahora y lleva tu marca al siguiente nivel." />
+    <meta
+      name="description"
+      content="Bienvenido a Publik, tu plataforma para potenciar tu presencia en línea. Regístrate ahora y lleva tu marca al siguiente nivel."
+    />
 
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const emailInput = document.getElementById("email");
-        const usernameInput = document.getElementById("username");
-        const footer = document.querySelector("footer");
-
-        // Función para manejar el evento de enfoque (cuando se selecciona un campo de texto)
-        function handleInputFocus() {
-          // Verificar si es un dispositivo móvil y el campo es usuario o email antes de ocultar el footer
-          if (
-            isMobileDevice() &&
-            (document.activeElement === usernameInput ||
-              document.activeElement === emailInput)
-          ) {
-            footer.classList.add("hide-footer");
-          }
-        }
-
-        // Función para manejar el evento de desenfoque (cuando se deja de seleccionar el campo de texto)
-        function handleInputBlur() {
-          // Verificar si es un dispositivo móvil antes de mostrar el footer
-          if (isMobileDevice()) {
-            footer.classList.remove("hide-footer");
-          }
-        }
-
-        // Función para verificar si es un dispositivo móvil
-        function isMobileDevice() {
-          return window.innerWidth <= 768; // Puedes ajustar este umbral según tus necesidades
-        }
-
-        // Agregar escuchadores de eventos de enfoque y desenfoque a los campos de texto
-        usernameInput.addEventListener("focus", handleInputFocus);
-        emailInput.addEventListener("focus", handleInputFocus);
-
-        usernameInput.addEventListener("blur", handleInputBlur);
-        emailInput.addEventListener("blur", handleInputBlur);
-
-        // Puedes ajustar este código según tus necesidades específicas
-      });
-    </script>
 
     <style>
       .body {
@@ -130,6 +93,7 @@
   <body style="background-color: black">
     <script src="js/auth.js"></script>
     <script src="js/reset-password.js"></script>
+    <script src="js/movilTeclado.js"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
       <div class="container">
@@ -257,7 +221,6 @@
     >
       <div class="container">
         <section class="row text-white mb-0">
-          <!-- Formulario de registro -->
           <div class="col-12 col-lg-6 mb-0">
             <div class="register-container" style="margin-top: 20px">
               <h1 class="text-white">Recuperar Contraseña</h1>
@@ -311,12 +274,12 @@
                   ¿Ya tienes cuenta? Inicia sesión
                 </button>
                 <button
-                type="button"
-                class="btn btn-link text-right mt-3"
-                onclick="window.location.href='newpass.html'"
-              >
-                Reguistrar nueva contraseña
-              </button>
+                  type="button"
+                  class="btn btn-link text-right mt-3"
+                  onclick="window.location.href='newpass.html'"
+                >
+                  Reguistrar nueva contraseña
+                </button>
               </form>
             </div>
           </div>
@@ -326,8 +289,8 @@
           >
             <div class="container text-right">
               <h1>
-                <i class="bi bi-patch-check-fill"></i
-                > <b>¿Olvidaste tu contraseña? No te preocupes!</b> Ingresa tu
+                <i class="bi bi-patch-check-fill"></i>
+                <b>¿Olvidaste tu contraseña? No te preocupes!</b> Ingresa tu
                 dirección de correo electrónico y nombre de usuario asociados
                 con tu cuenta.
               </h1>
@@ -369,17 +332,25 @@
           <a href="https://youtube.com" target="_blank" aria-label="YouTube">
             <i class="bi bi-youtube fs-3"></i>
           </a>
-          <a href="https://www.instagram.com/publik.tuc/" target="_blank" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/publik.tuc/"
+            target="_blank"
+            aria-label="Instagram"
+          >
             <i class="bi bi-instagram fs-3"></i>
           </a>
           <a href="https://m.me/user" target="_blank" aria-label="Messenger">
             <i class="bi bi-messenger fs-3"></i>
           </a>
-          <a href="https://api.whatsapp.com/send?phone=5493814685931" target="_blank" aria-label="WhatsApp">
+          <a
+            href="https://api.whatsapp.com/send?phone=5493814685931"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
             <i class="bi bi-whatsapp fs-3"></i>
           </a>
         </nav>
-        
+
         <div class="row">
           <div
             class="col-12 col-md-12 col-lg-12 d-flex justify-content-center mt-3"

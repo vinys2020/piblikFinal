@@ -419,6 +419,7 @@ a:hover {
   color: orange;
 }
 
+
 @media (max-width: 767px) {
   .info::-webkit-scrollbar {
     display: none; /* Oculta la barra de desplazamiento en dispositivos móviles */

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1, maximum-scale=10"
     />
     <title>Registro - Publik</title>
     <link
@@ -26,8 +26,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/zyro-image__4_-removebg-preview.png" />
 
-    <meta name="description" content="Bienvenido a Publik, tu plataforma para potenciar tu presencia en línea. Regístrate ahora y lleva tu marca al siguiente nivel." />
-
+    <meta
+      name="description"
+      content="Bienvenido a Publik, tu plataforma para potenciar tu presencia en línea. Regístrate ahora y lleva tu marca al siguiente nivel."
+    />
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -39,22 +41,18 @@
         const footer = document.querySelector("footer");
 
         function handleInputFocus() {
-
           if (isMobileDevice()) {
             footer.classList.add("hide-footer");
           }
         }
 
         function handleInputBlur() {
-
           if (isMobileDevice()) {
-
             footer.classList.remove("hide-footer");
           }
         }
 
         function isMobileDevice() {
-
           return window.innerWidth <= 768;
         }
 
@@ -131,6 +129,7 @@
   <body style="background-color: black">
     <script src="js/login.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/verpass.js"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
       <div class="container">
@@ -299,24 +298,70 @@
                   <label for="password" class="form-label text-white"
                     >Contraseña:</label
                   >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    required
-                  />
+                  <div class="mb-3 input-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      required
+                      style="z-index: 0"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-light"
+                        type="button"
+                        id="togglePassword"
+                        aria-label="Mostrar contraseña"
+                        style="
+                          border-color: rgba(255, 255, 255, 0.582);
+                          float: right;
+                          width: 40px;
+                          height: 45px;
+                          border-top-left-radius: 0px;
+                          border-bottom-left-radius: 0px;
+                          z-index: 0;
+                        "
+                      >
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="confirmPassword" class="form-label text-white"
                     >Confirmar Contraseña:</label
                   >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="confirmPassword"
-                    required
-                  />
+                  <div class="mb-3 input-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="confirmPassword"
+                      aria-label="Mostrar contraseña"
+                      required
+                      style="z-index: 0"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-light"
+                        type="button"
+                        id="toggleConfirmPassword"
+                        aria-label="Mostrar contraseña"
+                        style="
+                          border-color: rgba(255, 255, 255, 0.582);
+                          float: right;
+                          width: 40px;
+                          height: 45px;
+                          border-top-left-radius: 0px;
+                          border-bottom-left-radius: 0px;
+                          z-index: 0;
+                        "
+                      >
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
+
                 <button
                   type="submit"
                   class="btn btn-dark col-6 mx-auto d-block mt-4"

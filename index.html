@@ -70,35 +70,6 @@
       }
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const usernameInput = document.getElementById("username");
-        const passwordInput = document.getElementById("password");
-        const footer = document.querySelector("footer");
-
-        function handleInputFocus() {
-          if (isMobileDevice()) {
-            footer.classList.add("hide-footer");
-          }
-        }
-
-        function handleInputBlur() {
-          if (isMobileDevice()) {
-            footer.classList.remove("hide-footer");
-          }
-        }
-
-        function isMobileDevice() {
-          return window.innerWidth <= 768;
-        }
-
-        usernameInput.addEventListener("focus", handleInputFocus);
-        passwordInput.addEventListener("focus", handleInputFocus);
-        usernameInput.addEventListener("blur", handleInputBlur);
-        passwordInput.addEventListener("blur", handleInputBlur);
-      });
-    </script>
-
     <style>
       .body {
         overflow: auto;
@@ -158,6 +129,8 @@
   <body style="background-color: black">
     <script src="js/login.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/verpass.js"></script>
+    <script src="js/movilTeclado.js"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
       <div class="container">
@@ -304,12 +277,34 @@
                   <label for="password" class="form-label text-white"
                     >Contraseña:</label
                   >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    required
-                  />
+                  <div class="mb-3 input-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      required
+                      style="z-index: 0;"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-light"
+                        type="button"
+                        id="togglePassword"
+                        aria-label="Mostrar contraseña"
+                        style="
+                          border-color: rgba(255, 255, 255, 0.952);
+                          float: right;
+                          width: 40px;
+                          height: 45px;
+                          border-top-left-radius: 0px;
+                          border-bottom-left-radius: 0px;
+                          z-index: 0;
+                        "
+                      >
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <button
                   type="submit"
@@ -365,6 +360,7 @@
       >
         <br />
       </article>
+
     </main>
 
     <footer class="bg-black p-3">
