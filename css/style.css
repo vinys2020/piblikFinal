@@ -441,15 +441,26 @@ a:hover {
 }
 
 #videoElement {
-  border-radius: 40px;
+  border-radius: 80px;
+}
+
+#articulitos {
+margin-bottom: 75px;
 }
 
 @media only screen and (max-width: 768px) {
   #videoElement {
-    border-radius: 5px; /* Reset border-radius to 0px for screens smaller than 768px (mobile devices) */
+    border-radius: 15px; /* Reset border-radius to 0px for screens smaller than 768px (mobile devices) */
+    padding: 10px;
+
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #articulitos {
+    margin-bottom: 10px;
+  }
+}
 
 
 @media (max-width: 767px) {
