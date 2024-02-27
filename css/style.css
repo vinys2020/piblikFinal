@@ -448,10 +448,24 @@ a:hover {
 margin-bottom: 75px;
 }
 
+#fotoComenzar {
+  border-radius: 5%;
+  height: 480px;
+}
+
 @media only screen and (max-width: 768px) {
   #videoElement {
-    border-radius: 15px; /* Reset border-radius to 0px for screens smaller than 768px (mobile devices) */
+    border-radius: 15px;
     padding: 10px;
+
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #fotoComenzar {
+    height: 100%;
+    width: 100%;
 
   }
 }
