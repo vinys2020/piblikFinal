@@ -440,6 +440,15 @@ a:hover {
   }
 }
 
+#videoElement {
+  border-radius: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  #videoElement {
+    border-radius: 5px; /* Reset border-radius to 0px for screens smaller than 768px (mobile devices) */
+  }
+}
 
 
 
